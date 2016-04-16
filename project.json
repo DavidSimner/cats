@@ -43,9 +43,7 @@
   ],
   "scripts": {
     "prepublish": [
-      "npm install",
-      "gulp clean",
-      "gulp min"
+      "npm install"
     ]
   }
 }
