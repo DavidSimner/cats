@@ -8,10 +8,13 @@ body {
     background: url('../images/background.jpg') right / contain no-repeat, black;
 }
 
-.Button {
+.Home-button {
     position: relative;
     left: 42%;
     top: 66%;
+}
+
+.Button {
     margin-right: 18px;
     border: 1px solid transparent;
     border-radius: 4px;
