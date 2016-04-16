@@ -1,8 +1,25 @@
 body {
     margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 14px;
 }
 
 .Home-main {
     height: 100vh;
     background: url('../images/background.jpg') right / contain no-repeat, black;
+}
+
+.Button {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 6px 12px;
+    color: white;
+}
+
+.Button--blue {
+    background-color: #3c85df;
+}
+
+.Button--green {
+    background-color: #1aac1e;
 }
