@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+}
+
+.Home-main {
+    height: 100vh;
+    background: url('../images/background.jpg') right / contain no-repeat, black;
+}
