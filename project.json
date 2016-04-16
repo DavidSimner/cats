@@ -32,18 +32,15 @@
   },
 
   "exclude": [
-    "wwwroot",
-    "node_modules"
+    "wwwroot"
   ],
   "publishExclude": [
-    "node_modules",
     "**.xproj",
     "**.user",
     "**.vspscc"
   ],
   "scripts": {
     "prepublish": [
-      "npm install"
     ]
   }
 }
