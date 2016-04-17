@@ -27,9 +27,13 @@ iframe {
 }
 
 .Header {
+    display: flex;
     background-color: black;
     padding: 12px;
-    text-align: right;
+}
+
+.Header-nav {
+    flex-grow: 1;
 }
 
 .Header-item {
