@@ -6,7 +6,7 @@ namespace cats.Services
 {
     internal static class HashingService
     {
-        const int Iterations = 1000;
+        const int Iterations = 1 << 17;
         
         internal static string Hash(string salt, string password)
         {
