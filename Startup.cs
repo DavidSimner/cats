@@ -28,6 +28,7 @@ namespace cats
             // Add framework services.
             services.AddMvc();
             
+            services.AddSingleton(_ => new AccountService(ConnectionString));
             services.AddSingleton(_ => new LoginService(ConnectionString));
             services.AddSingleton(_ => new SessionService(ConnectionString));
         }
