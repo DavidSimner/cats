@@ -3,8 +3,11 @@ body {
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-.Home-main {
+.Main {
     height: 100vh;
+}
+
+.Home-main {
     background: url('../images/background.jpg') right / contain no-repeat, black;
 }
 
