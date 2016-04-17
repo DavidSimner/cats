@@ -8,5 +8,10 @@ namespace cats.Controllers
         {
             return View();
         }
+        
+        [HttpPost]
+        public void DoLogin(string email, string password)
+        {
+        }
     }
 }

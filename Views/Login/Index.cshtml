@@ -3,7 +3,7 @@
 }
 
 <main class="Main Login-main">
-    <form class="Login-form">
+    <form class="Login-form" data-url="/login/doLogin">
         <p class="Margin--topless Text--orange"><img src="~/images/padlock.svg" /> Log in securely</p>
         <input type="email" name="email" placeholder="Email address" autofocus />
         <input type="password" name="password" placeholder="Password" />
@@ -11,3 +11,24 @@
         <iframe name="news" class="Login-news" src="/news" width="100%" height="64"></iframe>
     </form>
 </main>
+
+@section scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script>
+        $('form').submit(function (event) {
+            event.preventDefault();
+            
+            var url = $(this).data('url');
+            var data = $(this).serialize();
+            $.ajax({
+                url: url,
+                method: 'POST',
+                data: data
+            }).done(function () {
+                window.location = '/nearby';
+            }).fail(function () {
+                window.location.reload();
+            });
+        });
+    </script>
+}
