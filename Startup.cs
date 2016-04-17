@@ -29,6 +29,7 @@ namespace cats
             services.AddMvc();
             
             services.AddSingleton(_ => new LoginService(ConnectionString));
+            services.AddSingleton(_ => new SessionService(ConnectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
