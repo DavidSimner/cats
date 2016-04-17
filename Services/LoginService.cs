@@ -2,9 +2,9 @@ using System.Data.SqlClient;
 
 namespace cats.Services
 {
-    internal static class LoginService
+    public class LoginService
     {
-        internal static bool IsPasswordCorrect(string email, string password)
+        internal bool IsPasswordCorrect(string email, string password)
         {
             using (var sqlConnection = new SqlConnection())
             {
