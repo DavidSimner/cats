@@ -26,6 +26,18 @@ iframe {
     text-align: center;
 }
 
+.Header {
+    background-color: black;
+    padding: 12px;
+    text-align: right;
+}
+
+.Header-item {
+    margin-right: 42px;
+    color: white;
+    text-decoration: none;
+}
+
 .Welcome-main {
     background: url('../images/welcome.jpg') right / contain no-repeat, black;
 }
