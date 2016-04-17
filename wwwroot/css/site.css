@@ -13,6 +13,10 @@ input {
     padding: 5px;
 }
 
+iframe {
+    border: 0;
+}
+
 .Margin--topless {
     margin-top: 0;
 }
@@ -40,6 +44,10 @@ input {
     display: inline-block;
     text-align: initial;
     margin-top: 76vh;
+}
+
+.Login-news {
+    display: block;
 }
 
 .Button {
