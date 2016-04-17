@@ -24,5 +24,17 @@ namespace cats.Controllers
             
             return View(new Nearby(email));
         }
+        
+        public IActionResult Image(string id)
+        {
+            var session = CookieService.GetOrCreateSession(HttpContext);
+            var email = m_SessionService.GetSessionEmail(session);
+            if (email == null)
+            {
+                return RedirectToAction("index", "login");
+            }
+            
+            return new RedirectResult($"/images/cats/{id}.jpg");
+        }
     }
 }
