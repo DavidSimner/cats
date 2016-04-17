@@ -62,6 +62,17 @@ iframe {
     display: block;
 }
 
+.Nearby-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #dcdcdc;
+}
+
+.Nearby-main > img {
+    height: 250px;
+}
+
 .Button {
     margin-right: 18px;
     border: 1px solid transparent;
