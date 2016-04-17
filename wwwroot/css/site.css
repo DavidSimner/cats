@@ -95,6 +95,10 @@ iframe {
     background-color: #1aac1e;
 }
 
+.Button:disabled {
+    background-color: #b6b6b6;
+}
+
 .Text--orange {
     color: #fe9901;
 }

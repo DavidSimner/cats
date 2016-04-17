@@ -17,6 +17,7 @@
     <script>
         $('form').submit(function (event) {
             event.preventDefault();
+            $(this).find('input[type=submit]').prop('disabled', true);
             
             var url = $(this).data('url');
             var data = $(this).serialize();
