@@ -18,8 +18,14 @@ namespace cats.Controllers
         }
         
         [HttpPost]
-        public void DoLogin(string email, string password)
+        public IActionResult DoLogin(string email, string password)
         {
+            if (!m_LoginService.IsPasswordCorrect(email, password))
+            {
+                return new BadRequestResult();
+            }
+            
+            return new NoContentResult();
         }
     }
 }
