@@ -22,7 +22,7 @@ namespace cats.Controllers
                 return RedirectToAction("index", "login");
             }
             
-            return View(new Nearby("TODO"));
+            return View(new Nearby(email));
         }
     }
 }
