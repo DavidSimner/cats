@@ -23,7 +23,6 @@ namespace cats.Controllers
             }
             
             var session = CookieService.GetOrCreateSession(HttpContext);
-            
             m_SessionService.LogSessionIn(session, email);
             
             return new NoContentResult();
@@ -32,7 +31,6 @@ namespace cats.Controllers
         public IActionResult LogOut()
         {
             var session = CookieService.GetOrCreateSession(HttpContext);
-            
             m_SessionService.LogSessionOut(session);
             
             return RedirectToAction("index", "welcome");
