@@ -2,7 +2,7 @@ using Microsoft.AspNet.Mvc;
 
 namespace cats.Controllers
 {
-    public class HomeController : Controller
+    public class WelcomeController : Controller
     {
         public IActionResult Index()
         {
