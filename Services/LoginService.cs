@@ -4,9 +4,16 @@ namespace cats.Services
 {
     public class LoginService
     {
+        private readonly string m_ConnectionString;
+
+        internal LoginService(string connectionString)
+        {
+            m_ConnectionString = connectionString;
+        }
+
         internal bool IsPasswordCorrect(string email, string password)
         {
-            using (var sqlConnection = new SqlConnection())
+            using (var sqlConnection = new SqlConnection(m_ConnectionString))
             {
                 sqlConnection.Open();
                 
