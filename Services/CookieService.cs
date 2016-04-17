@@ -8,7 +8,7 @@ namespace cats.Services
     {
         private const string Key = "THE_SESSION_ID";
         
-        internal static string GetCookieValue(HttpContext httpContext)
+        internal static string GetOrCreateSession(HttpContext httpContext)
         {
             var cookie = httpContext.Request.Cookies[Key];
             if (!cookie.Any())
