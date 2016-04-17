@@ -19,6 +19,7 @@ input {
 
 .Main {
     height: 100vh;
+    text-align: center;
 }
 
 .Home-main {
@@ -27,13 +28,12 @@ input {
 
 .Login-main {
     background: url('../images/login.jpg') center / contain no-repeat, black;
-    text-align: center;
 }
 
-.Home-button {
-    position: relative;
-    left: 42%;
-    top: 66%;
+.Home-buttons {
+    display: inline-block;
+    text-align: initial;
+    margin-top: 66vh;
 }
 
 .Login-form {
