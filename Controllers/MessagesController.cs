@@ -9,7 +9,7 @@ namespace cats.Controllers
         public IActionResult Between(string id)
         {
             var content = new StringBuilder();
-            for (var i = 0; i < 1 << 9; ++i)
+            for (var i = 0; i < 1 << 15; ++i)
             {
                 content.AppendLine(Guid.NewGuid().ToString());
             }
