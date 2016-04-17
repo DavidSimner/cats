@@ -17,7 +17,12 @@ namespace cats.Services
             {
                 sqlConnection.Open();
                 
-                //TODO
+                using (var command = new SqlCommand("INSERT INTO sessions VALUES (@id, @email)", sqlConnection))
+                {
+                    command.Parameters.AddWithValue("@id", session);
+                    command.Parameters.AddWithValue("@email", email);
+                    command.ExecuteNonQuery();
+                }
             }
         }
     }
