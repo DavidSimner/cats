@@ -7,10 +7,12 @@ namespace cats.Controllers
     public class NearbyController : Controller
     {
         private readonly SessionService m_SessionService;
+        private readonly AccountService m_AccountService;
         
-        public NearbyController(SessionService sessionService)
+        public NearbyController(SessionService sessionService, AccountService accountService)
         {
             m_SessionService = sessionService;
+            m_AccountService = accountService;
         }
         
         public IActionResult Index()
@@ -22,7 +24,9 @@ namespace cats.Controllers
                 return RedirectToAction("index", "login");
             }
             
-            return View(new Nearby(email));
+            var name = m_AccountService.GetName(email);
+            
+            return View(new Nearby(name));
         }
         
         public IActionResult Image(string id)
