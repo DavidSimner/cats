@@ -25,5 +25,19 @@ namespace cats.Services
                 }
             }
         }
+        
+        internal void LogSessionOut(string session)
+        {
+            using (var sqlConnection = new SqlConnection(m_ConnectionString))
+            {
+                sqlConnection.Open();
+                
+                using (var command = new SqlCommand("DELETE FROM sessions WHERE Id = @id", sqlConnection))
+                {
+                    command.Parameters.AddWithValue("@id", session);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

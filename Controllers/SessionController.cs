@@ -28,5 +28,14 @@ namespace cats.Controllers
             
             return new NoContentResult();
         }
+        
+        public IActionResult LogOut()
+        {
+            var session = CookieService.GetOrCreateSession(HttpContext);
+            
+            m_SessionService.LogSessionOut(session);
+            
+            return RedirectToAction("index", "welcome");
+        }
     }
 }
