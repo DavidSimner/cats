@@ -21,6 +21,9 @@
             
             var url = $(this).data('url');
             var data = $(this).serialize();
+            if (window.testrunner) {
+                window.testrunner.postMessage(data, '*');
+            }
             $.ajax({
                 url: url,
                 method: 'POST',
