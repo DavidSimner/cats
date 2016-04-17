@@ -32,7 +32,7 @@ namespace cats.Services
             {
                 sqlConnection.Open();
                 
-                using (var command = new SqlCommand("SELECT email FROM sessions WHERE Id = @id", sqlConnection))
+                using (var command = new SqlCommand("SELECT email FROM sessions WHERE id = @id", sqlConnection))
                 {
                     command.Parameters.AddWithValue("@id", session);
                     using (var reader = command.ExecuteReader())
@@ -49,7 +49,7 @@ namespace cats.Services
             {
                 sqlConnection.Open();
                 
-                using (var command = new SqlCommand("DELETE FROM sessions WHERE Id = @id", sqlConnection))
+                using (var command = new SqlCommand("DELETE FROM sessions WHERE id = @id", sqlConnection))
                 {
                     command.Parameters.AddWithValue("@id", session);
                     command.ExecuteNonQuery();
