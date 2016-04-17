@@ -26,7 +26,7 @@ iframe {
     text-align: center;
 }
 
-.Home-main {
+.Welcome-main {
     background: url('../images/welcome.jpg') right / contain no-repeat, black;
 }
 
@@ -34,7 +34,7 @@ iframe {
     background: url('../images/login.jpg') center / contain no-repeat, black;
 }
 
-.Home-buttons {
+.Welcome-buttons {
     display: inline-block;
     text-align: initial;
     margin-top: 66vh;
