@@ -10,7 +10,7 @@ namespace cats.Services
             {
                 sqlConnection.Open();
                 
-                using (var command = new SqlCommand("SELECT password FROM logins WHERE email = @email", sqlConnection))
+                using (var command = new SqlCommand("SELECT salt,hash FROM logins WHERE email = @email", sqlConnection))
                 {
                     command.Parameters.AddWithValue("@email", email);
                     using (var reader = command.ExecuteReader())
@@ -21,9 +21,12 @@ namespace cats.Services
                         }
                         else
                         {
-                            var expectedPassword = reader.GetString(0);
+                            var salt = reader.GetString(0);
+                            var expectedHash = reader.GetString(1);
                             
-                            return expectedPassword == password;
+                            var actualHash = HashingService.Hash(salt, password);
+                            
+                            return expectedHash == actualHash;
                         }
                     }
                 }
