@@ -11,6 +11,10 @@ body {
     background: url('../images/background.jpg') right / contain no-repeat, black;
 }
 
+.Login-main {
+    background: url('../images/login.jpg') center / contain no-repeat, black;
+}
+
 .Home-button {
     position: relative;
     left: 42%;
