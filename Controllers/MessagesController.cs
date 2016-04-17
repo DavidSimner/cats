@@ -1,3 +1,5 @@
+using System;
+using System.Text;
 using Microsoft.AspNet.Mvc;
 
 namespace cats.Controllers
@@ -6,8 +8,12 @@ namespace cats.Controllers
     {
         public IActionResult Between(string id)
         {
-            var content = new string(' ', 1 << (id != "4" ? 0 : 20));
-            return new ContentResult { Content = content };
+            var content = new StringBuilder();
+            for (var i = 0; i < 1 << 9; ++i)
+            {
+                content.AppendLine(Guid.NewGuid().ToString());
+            }
+            return new ContentResult { Content = content.ToString() };
         }
     }
 }
