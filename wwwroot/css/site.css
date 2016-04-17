@@ -27,6 +27,7 @@ input {
 
 .Login-main {
     background: url('../images/login.jpg') center / contain no-repeat, black;
+    text-align: center;
 }
 
 .Home-button {
@@ -36,9 +37,9 @@ input {
 }
 
 .Login-form {
-    position: relative;
-    left: 34%;
-    top: 76%;
+    display: inline-block;
+    text-align: initial;
+    margin-top: 76vh;
 }
 
 .Button {
