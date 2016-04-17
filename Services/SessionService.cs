@@ -26,6 +26,23 @@ namespace cats.Services
             }
         }
         
+        internal string GetSessionEmail(string session)
+        {
+            using (var sqlConnection = new SqlConnection(m_ConnectionString))
+            {
+                sqlConnection.Open();
+                
+                using (var command = new SqlCommand("SELECT email FROM sessions WHERE Id = @id", sqlConnection))
+                {
+                    command.Parameters.AddWithValue("@id", session);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        return reader.Read() ? reader.GetString(0) : null;
+                    }
+                }
+            }
+        }
+        
         internal void LogSessionOut(string session)
         {
             using (var sqlConnection = new SqlConnection(m_ConnectionString))
